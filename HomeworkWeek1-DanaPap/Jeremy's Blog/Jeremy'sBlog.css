@@ -1,0 +1,51 @@
+*{
+    margin: 1%;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+p1{
+    font-style: italic;
+}
+
+h1{
+    font-size: medium;
+    float: left;
+    margin-inline-start: -10%;
+}
+
+.navbar{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.navbar ul li{
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.navbar ul li a{
+    color: black;
+}
+
+.mid-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+}
+
+.centered-with-offset {
+    width: 90%;
+    margin-left: 8%;
+    margin-right: -10px;
+}
