@@ -1,0 +1,48 @@
+body{
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.modal-div {
+    margin-left: 10px;
+}
+
+
+.modal-content{
+    background-color: #DCDCDC;
+    position: relative;
+    width: 320px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+}
+
+.modal-footer {
+    font-size: x-large;
+    top: 73px;
+    position: relative;
+    display: flex;
+    margin-left: 150px;
+    justify-content: space-betweenß;
+}
+
+
+button.btn-secondary {
+    background-color: blue;
+    position: relative;
+    display: inline-flex;
+    
+}
+
+.button.btn-primary {
+    font-size: x-large;
+    top: 73px;
+    position: relative;
+    display: flex;
+ 
+}

@@ -1,0 +1,259 @@
+body {
+  background-color: #e8c7c8;
+  max-height: fit-content;
+  height: 970px;
+  width: 80%; /* Adjust this value to make the container narrower or wider */
+  max-width: 1170px; /* Set a maximum width to prevent the container from becoming too wide */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding to the container to create some space between the content and the container's edges */
+}
+
+header {
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -20px;
+}
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-flex;
+  background-color: white;
+  color: #e8c7c8;
+}
+
+nav a {
+  display: block;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  font-size: 20px;
+  margin-left: 5px;
+  color: #e8c7c8;
+  font-family: fantasy;
+  font-style: bold;
+}
+
+.text {
+  flex-basis: 25%;
+  text-align: left;
+  color: white;
+  font-family: fantasy;
+  font-size: large;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.phone-number-wrapper {
+  padding-left: 300px;
+  color: white;
+  font-family: fantasy;
+}
+
+.contact-info {
+  padding-left: 35%;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  height: 50px;
+  color: white;
+}
+
+.line {
+  border-left: 1px solid white;
+  height: 20%;
+  position: absolute;
+  left: 12%;
+  top: 40%;
+  margin-left: 8%;
+}
+
+.img {
+  height: 70%;
+}
+
+.content-box {
+  position: relative;
+  top: -650px;
+  left: 55px;
+  width: 30%;
+  color: white;
+  background-color: #e8c7c8;
+  font-family: fantasy;
+  font-size: larger;
+}
+
+h2 {
+  align-content: center;
+}
+
+.main-content-box {
+  display: flex;
+  top: -500%;
+}
+
+hr {
+  border: 1px dashed white;
+  margin-top: 3%;
+}
+
+.right-pointing-mark {
+  background-size: 20px;
+}
+
+.my-link {
+  color: #b9b8fb;
+  top: -82px;
+  float: right;
+  position: relative;
+  font-size: xx-large;
+  padding-right: 20px;
+  font-style: italic bold;
+}
+
+h3 {
+  font-size: large;
+}
+
+.main {
+  display: flex;
+}
+
+.main-container-images {
+  margin-right: 20px;
+  text-align: center;
+  position: relative;
+  top: -300px;
+  color: white;
+  border: white 2px solid;
+}
+
+.main-container-images img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.main-container-images h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.main-container-images p {
+  font-size: 18px;
+}
+
+.link {
+  float: right;
+  color: white;
+}
+
+a {
+  font-size: medium;
+  top: -3%;
+  float: right;
+  color: white;
+  font-style: normal;
+  font-display: normal;
+  position: relative;
+}
+
+.left-side {
+  color: white;
+  float: right;
+}
+
+.text-container {
+  display: flex;
+  margin-bottom: 90px;
+  position: relative;
+  top: -200px;
+  max-width: 100%; /* Ensure that the image doesn't overflow its container */
+  width: 900px;
+  justify-content: space-between;
+  margin-right: 10px;
+  height: 700px;
+}
+
+.sidebar {
+  padding: 20px;
+  top: -100px;
+  position: relative;
+}
+
+.sidebar-image {
+  width: 350px;
+  height: 70%;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  max-width: 100%; /* Ensure that the content doesn't overflow its container */
+  width: 850px;
+  color: white;
+  align-items: center;
+  top: -100px;
+  height: 700px;
+}
+
+.column-box-1 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: -35px;
+}
+
+.column-box-2 {
+  width: 300px;
+  height: 475px;
+  margin-left: 70px;
+  position: relative;
+}
+
+.list ul li {
+  text-decoration: none;
+  list-style: none;
+  text-decoration: underline;
+  list-style: none;
+}
+
+.img-style {
+  height: 350px;
+  margin-left: 10px;
+  gap: 2px solid;
+}
+.image-container {
+  text-align: center; /* Center the images horizontally */
+  display: flex;
+  position: relative;
+  top: -400px;
+}
+
+.image-container img {
+  width: 19%; /* Set the width to 20% to make 5 images fit on one line */
+  vertical-align: middle; /* Align the images vertically */
+  gap: 10px;
+  position: relative;
+  display: flex;
+}
+
+footer {
+  background-color: white;
+  color: #e8c7c8;
+  position: relative;
+  top: -350px;
+  
+}
