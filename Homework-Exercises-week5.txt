@@ -1,0 +1,33 @@
+Implement “play” function that is a “Rock, paper, scissors” game.
+Implementations notes:
+­ Create an array with all the possibilities (rock, paper, scissors); ­ Pick a random option for Computer ( use Math.random);
+­ Pick a random option for User ( use Math.random);
+­ Apply game rules for both options (use if/else if structures)
+Calling “play()” function will display in console something like this:
+Computer choice: “Rock” User choice: “Paper”
+User wins!
+
+
+
+function play() {
+  const options = ["rock", "paper", "scissors"];
+  const computerChoice = options[Math.floor(Math.random() * options.length)];
+  const userChoice = options[Math.floor(Math.random() * options.length)];
+
+  console.log(`Computer choice: "${computerChoice}" User choice: "${userChoice}"`);
+
+  if (computerChoice === userChoice) {
+    console.log("It's a tie!");
+  } else if (
+    (computerChoice === "rock" && userChoice === "scissors") ||
+    (computerChoice === "paper" && userChoice === "rock") ||
+    (computerChoice === "scissors" && userChoice === "paper")
+  ) {
+    console.log("Computer wins!");
+  } else {
+    console.log("User wins!");
+  }
+}
+
+play(); // Example output: "Computer choice: "Rock" User choice: "Paper"\nUser wins!"
+
