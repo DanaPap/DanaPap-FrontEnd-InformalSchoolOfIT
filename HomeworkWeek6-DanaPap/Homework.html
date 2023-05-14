@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="Homework.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <form id="contact-form">
+        <div>
+          <label for="firstname"></label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="First Name"
+          />
+        </div>
+        <div>
+          <label for="lastname"></label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Last Name"
+          />
+        </div>
+        <div>
+          <label>Gender </label>
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                style="top: 25px"
+              />
+              M
+            </label>
+            <label style="top: 29px">
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                style="top: 25px"
+              />
+              F
+            </label>
+          </div>
+          <div style="position: relative; top: 30px">
+            <label for="message"></label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message here..."
+            ></textarea>
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+      <img src="IMG_9324.jpg" alt="Image" />
+    </div>
+    <div id="confirmation-banner" class="hidden">
+      <p> ✅ Thank you for submitting the form, <span id="first-name"></span>!</p>
+    </div>
+    <div id="alert-message" class="hidden"></div>
+  <script src="Homework.js"></script>
+  </body>
+</html>
