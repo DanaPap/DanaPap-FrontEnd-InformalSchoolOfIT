@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFE8F2;
+  margin: 10px;
+  padding: 20px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.container-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product-details {
+  width: 48%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-details .product-image {
+  width: 100%;
+  height: 600px;
+}
+
+.buttons-container {
+  margin-top: 10px;
+}
+
+.buttons-container button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-container button.button-cart {
+  background-color: #4CAF50;
+  color: #FFF;
+  border: none;
+}
+
+.buttons-container button.button-view {
+  background-color: #f44336;
+  color: #FFF;
+  border: none;
+}
+
+.buttons-container button.button-view:hover {
+  background-color: #d32f2f;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  color: pink;
+}
+
+.second-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#cartItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product {
+  margin-bottom: 5px;
+}
+
+#totalPrice {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#applyDiscountButton {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#applyDiscountButton:hover {
+  background-color: #45a049;
+}

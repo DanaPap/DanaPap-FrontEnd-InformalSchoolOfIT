@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Girl Toy Online</title>
+  <link rel="stylesheet" type="text/css" href="OnlineShoppingSystem.css">
+</head>
+
+<body>
+  <header class="container-header">
+    <h1>Barbie</h1>
+    <div>
+      <img class="image" src="Barbie_Logo.jpg" alt="Barbie">
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="product-details">
+      <h2 class="product-name">Barbie with her Pink Convertible Car</h2>
+      <b><p class="product-price" style="color: pink;">Price: $80</p></b>
+      <img class="product-image" src="barbie.jpg" alt="Barbie With Her Pink Convertible Car">
+      <div class="buttons-container">
+        <button class="button-cart" data-product-name="Barbie with her Pink Convertible Car" data-product-price="80" onclick="addToCart(this)">Cart</button>
+        <button class="button-view" onclick="displayProduct(0)">View</button>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h2 class="product-name">Barbie And Her Wardrobe</h2>
+      <b><p class="product-price" style="color: pink;">Price: $75</p></b>
+      <img class="product-image" src="barbie1.jpg" alt="Barbie And Her Wardrobe">
+      <div class="buttons-container">
+        <button class="button-cart" data-product-name="Barbie And Her Wardrobe" data-product-price="75" onclick="addToCart(this)">Cart</button>
+        <button class="button-view" onclick="displayProduct(1)">View</button>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h2 class="product-name">Barbie And Her Beautiful Horse</h2>
+      <b><p class="product-price" style="color:pink;">Price: $85</p></b>
+      <img class="product-image" src="barbie2.jpg" alt="Barbie And Her Beautiful Horse">
+      <div class="buttons-container">
+        <button class="button-cart" data-product-name="Barbie And Her Beautiful Horse" data-product-price="85" onclick="addToCart(this)">Cart</button>
+        <button class="button-view" onclick="displayProduct(2)">View</button>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h2 class="product-name">Barbie Winnter Sport-Snowmobile and Accesories</h2>
+      <b><p class="product-price" style="color: pink;">Price: $100</p></b>
+      <img class="product-image" src="barbie3.jpg" alt="Barbie Winnter Sport-Snowmobile and Accesories">
+      <div class="buttons-container">
+        <button class="button-cart" data-product-name="Barbie Winnter Sport-Snowmobile and Accesories" data-product-price="100" onclick="addToCart(this)">Cart</button>
+        <button class="button-view" onclick="displayProduct(3)">View</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="second-container">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Apply Discount Percentage</h3>
+        <input type="number" id="discountCodeInput" placeholder="Enter discount percentage (0-100)">
+        <button id="apply" onclick="applyDiscount()">Apply</button>
+      </div>
+    </div>
+    <ul id="cartItems"></ul>
+    <p id="totalPrice">Total Price: $0.00</p>
+    <button id="applyDiscountButton" onclick="openModal()">Apply Discount</button>
+  </div>
+
+  <script src="OnlineShoppingSystem.js"></script>
+</body>
+
+</html>
