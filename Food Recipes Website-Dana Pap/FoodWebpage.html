@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Webpage</title>
+  <link rel="stylesheet" href="FoodWebpage.css">
+</head>
+<body>
+  <header>
+    <h1>Find Meal For Your Ingredients</h1>
+    <p>Real food doesn't have ingredients,</p>
+    <p><i>-Jamie Oliver</i></p>
+  </header>
+
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="ingredientInput" placeholder="Enter ingredient">
+      <button id="search-button" onclick="searchByIngredient()">Search</button>
+    </div>
+
+    <h2 id="searchResultsTitle"></h2>
+
+    <div class="recipe-list" id="recipeList"></div>
+  </div>
+
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="recipeName"></h2>
+      <div class="recipe-details">
+        <div class="recipe-image">
+          <img id="recipeImage" src="" alt="">
+          <h3 id="recipeTitle"></h3>
+          <button class="get-recipe-button" onclick="getRecipeDetails()"></button>
+        </div>
+        <div class="recipe-instructions">
+          <h3>Ingredients:</h3>
+          <ul id="ingredientList"></ul>
+          <h3>Instructions:</h3>
+          <p id="instructions"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="FoodWebpage.js"></script>
+</body>
+</html>
+
