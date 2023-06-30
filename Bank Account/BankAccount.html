@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Accounts</title>
+  <link rel="stylesheet" href="BankAccount.css">
+</head>
+<body>
+  <h1>Bank Accounts</h1>
+  <img src="bankaccount.jpg" style="width: 100%;">
+  <div class="account">
+    <h3>Savings Account</h3>
+    <p>Account Number: <span id="savingsAccountNumber"></span></p>
+    <p>Balance: <span id="savingsBalance"></span></p>
+    <p>Interest Rate: <span id="interestRate"></span></p>
+    <p>
+      <label for="savingsAmount">Amount:</label>
+      <input type="number" id="savingsAmount" />
+      <button onclick="savingsDeposit()">Deposit</button>
+      <button onclick="savingsWithdraw()">Withdraw</button>
+    </p>
+    <p id="savingsError" class="error"></p>
+  </div>
+
+  <div class="account">
+    <h3>Checking Account</h3>
+    <p>Account Number: <span id="checkingAccountNumber"></span></p>
+    <p>Balance: <span id="checkingBalance"></span></p>
+    <p>Transaction Limit: <span id="transactionLimit"></span></p>
+    <p>
+      <label for="checkingAmount">Amount:</label>
+      <input type="number" id="checkingAmount" />
+      <button onclick="checkingDeposit()">Deposit</button>
+      <button onclick="checkingWithdraw()">Withdraw</button>
+    </p>
+    <p id="checkingError" class="error"></p>
+  </div>
+  <script src="BankAccount.js"></script>
+</body>
+</html>

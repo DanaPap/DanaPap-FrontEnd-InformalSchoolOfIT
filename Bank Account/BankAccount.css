@@ -1,0 +1,27 @@
+body {
+font-family: Arial, sans-serif;
+padding: 20px;
+}
+
+h1 {
+margin-bottom: 20px;
+}
+
+.account {
+margin-bottom: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.account h3 {
+margin: 0;
+}
+
+.balance {
+font-weight: bold;
+}
+
+.error {
+color: red;
+}
