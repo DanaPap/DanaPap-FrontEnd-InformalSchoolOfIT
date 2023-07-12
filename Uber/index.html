@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uber Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>UBER</h1>
+        <p><strong> Make your trip more enjoyable!</strong></p>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br />
+
+      <h1>User Registration</h1>
+      <form
+        name="registrationForm"
+        onsubmit="return validateForm()"
+        action="login.html"
+        method="post"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <span id="nameError" class="error"></span><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span id="emailError" class="error"></span><br /><br />
+
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <span id="phoneError" class="error"></span><br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <span id="passwordError" class="error"></span><br /><br />
+
+        <input type="submit" value="Register" />
+      </form>
+      <br />
+
+      <h1>User Login</h1>
+      <form name="loginForm" onsubmit="return validateForm()" method="post">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required />
+        <span id="loginEmailError" class="error"></span><br /><br />
+
+        <label for="loginPassword">Password:</label>
+        <input
+          type="password"
+          id="loginPassword"
+          name="loginPassword"
+          required
+        />
+        <span id="loginPasswordError" class="error"></span><br /><br />
+
+        <input type="submit" value="Login" />
+      </form>
+      <br />
+
+      <h1>User Profile</h1>
+      <div class="profile-container">
+        <h2>Profile Information</h2>
+        <form onsubmit="return updateProfile()">
+          <label for="profileName">Name:</label>
+          <input type="text" id="profileName" name="profileName" required />
+          <br />
+
+          <label for="profileEmail">Email:</label>
+          <input type="email" id="profileEmail" name="profileEmail" required />
+          <br />
+
+          <label for="profilePhone">Phone number:</label>
+          <input type="tel" id="profilePhone" name="profilePhone" required />
+          <br />
+
+          <input type="submit" value="Update Profile" />
+          <span id="profileMessage"></span>
+        </form>
+      </div>
+      <br/>
+
+      <div class="profile-container">
+        <h2>Payment Methods</h2>
+        <form onsubmit="return addPaymentMethod()">
+          <label for="cardNumber">Card Number:</label>
+          <input type="text" id="cardNumber" name="cardNumber" required />
+          <br />
+
+          <label for="cardName">Card Name:</label>
+          <input type="text" id="cardName" name="cardName" required />
+          <br />
+          <span class="error" id="paymentMethodError"></span>
+
+          <input type="submit" value="Add Payment Method" />
+        </form>
+        <br />
+
+        <div id="paymentMethodsContainer"></div>
+      </div>
+      <br />
+
+      <h1>Ride Request</h1>
+      <form onsubmit="return calculateFare()">
+        <label for="pickupLocation">Pickup location:</label>
+        <input type="text" id="pickupLocation" name="pickupLocation" required />
+        <span id="pickupLocationError" class="error"></span><br /><br />
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required />
+        <span id="destinationError" class="error"></span><br /><br />
+
+        <input type="submit" value="Request Ride" />
+      </form>
+
+      <div id="fareMessage"></div>
+      <div id="arrivalTimeMessage"></div>
+      <br />
+
+      <h1>Ride History</h1>
+      <div id="rideContainer"></div>
+      <div id="paginationContainer" class="pagination"></div>
+      <br />
+      <h1>Driver Registration</h1>
+      <form
+        name="driverRegistrationForm"
+        onsubmit="return validateForm()"
+        action="driver_login.html"
+        method="post"
+      >
+        <label for="driverName">Name:</label>
+        <input type="text" id="driverName" name="driverName" required />
+        <span id="driverNameError" class="error"></span><br /><br />
+
+        <label for="driverEmail">Email:</label>
+        <input type="email" id="driverEmail" name="driverEmail" required />
+        <span id="driverEmailError" class="error"></span><br /><br />
+
+        <label for="driverPhone">Phone number:</label>
+        <input type="tel" id="driverPhone" name="driverPhone" required />
+        <span id="driverPhoneError" class="error"></span><br /><br />
+
+        <label for="vehicleDetails">Vehicle details:</label>
+        <input type="text" id="vehicleDetails" name="vehicleDetails" required />
+        <span id="vehicleDetailsError" class="error"></span><br /><br />
+
+        <label for="licensePlate">License plate:</label>
+        <input type="text" id="licensePlate" name="licensePlate" required />
+        <span id="licensePlateError" class="error"></span><br /><br />
+
+        <input type="submit" value="Register" />
+      </form>
+      <br />
+
+      <h1>Driver Dashboard</h1>
+      <h2>Accepted Rides</h2>
+      <div id="ridesContainer" class="rides"></div>
+      <br />
+      <h2>Earnings</h2>
+      <div id="earningsContainer" class="earnings"></div>
+
+      <div class="button-container">
+        <button onclick="location.href='driver_ride_history.html'">
+          View Ride History
+        </button>
+      </div>
+      <br />
+
+      <h1>Ride Details</h1>
+      <div class="driver-info">
+        <h2>Driver Information</h2>
+        <p><strong>Driver:</strong> <span id="driverName"></span></p>
+        <p><strong>Rating:</strong> <span id="driverRating"></span></p>
+      </div>
+      <br />
+
+      <div class="address-info">
+        <h2>Addresses</h2>
+        <p><strong>Pickup Address:</strong> <span id="pickupAddress"></span></p>
+        <p>
+          <strong>Destination Address:</strong>
+          <span id="destinationAddress"></span>
+        </p>
+      </div>
+      <br />
+
+      <h2>Map</h2>
+      <div id="map"></div>
+      <br />
+
+      <div class="fare-info">
+        <h2>Fare Details</h2>
+        <p><strong>Fare:</strong> <span id="fare"></span></p>
+      </div>
+      <br />
+
+      <div class="review-form">
+        <h2>Rate and Review</h2>
+        <form>
+          <label for="rating">Rating:</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="5"
+            required
+          />
+
+          <label for="review">Review:</label>
+          <textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+          <input type="submit" value="Submit Review" />
+        </form>
+      </div>
+
+      <footer>
+        <p>&copy; 2023 All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmpxapiDL6l3V8SS-hHSA_9bxjezwC9Pk&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
