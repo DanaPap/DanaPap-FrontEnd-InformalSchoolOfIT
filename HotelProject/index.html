@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Bootstrap 5 CDN Links -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Swiper's CSS -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/swiper.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+  <!-- Navbar section -->
+  <header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" class="img-fluid" alt="logo" style="width: 20%;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav menu-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rooms">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#price">Price</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#map">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="main-btn mt-3 mt-lg-0" href="#">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar section exit -->
+
+  <!-- Banner section -->
+  <section id="home" class="banner_wrapper p-0">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" style="background-image: url(images/hotel.swimingpool.png);">
+          <div class="slider-caption text-center">
+            <div>
+              <h1>Welcome to Luxury Sea View Hotel</h1>
+              <p>A magical view awaits</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url(images/4.jpg);">
+          <div class="slider-caption text-center">
+            <div>
+              <h1>Welcome to Luxury Sea View Hotel</h1>
+              <p>A magical view awaits</p>
+            </div>
+          </div>
+        </div>
+      
+
+        <div class="swiper-slide" style="background-image: url(images/pool.slider.png);">
+          <div class="slider-caption text-center">
+            <div>
+              <h1>Welcome to Sea View Hotel</h1>
+              <p>A magical view awaits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+   
+    <div class="container booking-area">
+      <form class="row" id="bookingForm">
+        <div class="col-lg mb-3 mb-lb-0">
+          <input type="date" class="form-control" id="checkInDate">
+        </div>
+        <div class="col-lg mb-3 mb-lb-0">
+          <input type="date" class="form-control" id="checkOutDate">
+        </div>
+        <div class="col-lg mb-3 mb-lb-0">
+          <select class="form-select" id="adults">
+            <option selected>Adults</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="col-lg mb-3 mb-lb-0">
+          <select class="form-select" id="children">
+            <option selected>Children</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="col-lg mb-3 mb-lb-0">
+          <button type="button" class="main-btn rounded-2 px-lg-3" onclick="simulateBooking()">Make a Reservation</button>
+        </div>
+      </form>
+    </div>
+  <!-- Banner section exit -->
+
+  <!--About section-->
+  <section style="height: 200px"></section>
+  <section id="about" class="about_wrapper">
+    <div class="container">
+      <div class="row flex-lg-row flex-column-reverse">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h3>Welcome to <span>Luxury Sea View Hotel<br class="d-none d-lg-block"></span></h3>
+          <p>Luxury Sea View Hotel is a family-friendly hotel that offers a wide range of accommodation types, from rooms to suites. All this in the peaceful surroundings of our beautiful gardens, will make your time with us an unforgettable holiday.</p>
+
+          <p>Esteemed guests are welcome to relax and unwind in a quiet and elegant setting in the popular Santorini and enjoy a genuine experience of leisure, pleasure, gastronomy and wellness within the premises of the hotel</p>
+          <a href="#" class="main-btn mt-4">Explore</a>
+        </div>
+        <div class="col-lg-6 mb-4 mb-lg-0 ps-lg-4 text-center">
+          <div class="image-container">
+            <img src="images/reception.jpg" style="height: 197px;width: 205px;" class="img-fluid" alt="about">
+            <img src="images/reception2.jpg" style="height: 197px;width: 205px;" class="img-fluid" alt="about">
+            <img src="images/reception1.jpg" style="height: 197px;width: 205px;" class="img-fluid" alt="about">
+            <img src="images/reception3jpg.jpg" style="height: 197px;width: 205px;" class="img-fluid" alt="about">
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section>
+
+  <!--Rooms section-->
+  <section id="rooms" class="rooms_wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 section-title text-center mb-5">
+          <h6>The unique view, the superb service, as well as the beautiful apartments promise to take you on a journey!
+            Enjoy the Luxury Sea View Hotel experience!</h6>
+          <h3>Accommodation</h3>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-md-4 mb-4 mb-lg-0">
+          <div class="room-items">
+            <img src="images/pool.jpeg" class="img-fluid">
+            <div class="room-item-wrap">
+              <div class="room-content">
+                <h5 class="text-white mb-lg-5 text-decoration-underline">Cave Pool Suite</h5>
+                <p class="text-white" style="font-size: smaller;">Discover the intimacy and the cosiness of our Cave Pool Suite. Ideal for 2 adults </p>
+                <p class="text-white fw-bold mt-lg-4">$450/Per Night</p>
+                <a class="main-btn border-white text-white mt-lg-5" href="#">Book Now</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 mb-lg-0">
+          <div class="room-items">
+            <img src="images/hotel.swimingpool.png" class="img-fluid">
+            <div class="room-item-wrap">
+              <div class="room-content">
+                <h5 class="text-white mb-lg-5 text-decoration-underline"> Infinity Pool Suite</h5>
+                <p class="text-white" style="font-size: smaller;">Our signature Infinity Pool Suite features 4 private pools and 2 indoor cave pools. Ideal for 2-6 adults</p>
+                <p class="text-white fw-bold mt-lg-4">$950/Per Night</p>
+                <a class="main-btn border-white text-white mt-lg-5" href="#">Book Now</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 mb-lg-0">
+          <div class="room-items">
+            <img src="images/pool2.jpeg" class="img-fluid">
+            <div class="room-item-wrap">
+              <div class="room-content">
+                <h5 class="text-white mb-lg-5 text-decoration-underline"> Honeymoon Pool Suite</h5>
+                <p class="text-white" style="font-size: smaller;">The Honeymoon Suite is a delightful setting for couples. Breathtaking views from private terrace and red sunset for those in love.</p>
+                <p class="text-white fw-bold mt-lg-4">$550/Per Night</p>
+                <a class="main-btn border-white text-white mt-lg-5" href="#">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Service sections -->
+  <section id="services" class="services_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-title text-center mb-5">
+          <h6>AMAZING EXPERIENCES IN SANTORINI ISLAND</h6>
+          <h3>YOUR MEMORIES MATTER DISCOVER AMAZING EXPERIENCES</h3>
+        </div>
+      </div>
+
+      <div class="row align-items-center service-item-wrap">
+        <div class="col-lg-7 p-lg-0">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="spa" role="tabpanel">
+              <img src="images/spa.jpg" style="width: 500px; height: 600px;" alt="Spa & Wellness">
+            </div>
+            <div class="tab-pane fade" id="private-dining" role="tabpanel">
+              <img src="images/private-dining.jpg" style="width: 500px; height: 600px;" alt="Private Dining">
+            </div>
+            <div class="tab-pane fade" id="yoga" role="tabpanel">
+              <img src="images/yoga.jpg" style="width: 500px; height: 600px;" alt="Yoga Sessions">
+            </div>
+            <div class="tab-pane fade" id="restaurant" role="tabpanel">
+              <img src="images/restaurant.jpeg" style="width: 500px; height: 600px;" alt="Restaurant & Bar">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 position-relative">
+          <div class="service-menu-area">
+            <ul class="nav">
+              <li>
+                <a data-bs-toggle="tab" href="#spa" class="active">
+                  <span class="service-icon">
+                    <img src="images/flower.png" style="width: 100%; border-radius: 50px;" alt="Spa & Wellness">
+                  </span>
+                  <h5>LOOK GOOD & FEEL GREAT</h5>
+                  <p><span>SPA & WELLNESS</span><br> Wellness is not just a trend. Is a way of life! </p>
+                </a>
+              </li>
+              <li>
+                <a data-bs-toggle="tab" href="#private-dining">
+                  <span class="service-icon">
+                    <img src="images/dinner.png" style="width: 92%; border-radius: 88px;" alt="Private Dining">
+                  </span>
+                  <h5>INTIMATE MOMENTS UNDER THE STARS</h5>
+                  <p><span>PRIVATE DINING </span><br> Savour exceptional cuisine, try selected wine labels and share moments with your loved ones. </p>
+                </a>
+              </li>
+              <li>
+                <a data-bs-toggle="tab" href="#yoga">
+                  <span class="service-icon">
+                    <img src="images/yoga-pose.png" style="width: 92%; border-radius: 88px;" alt="Yoga Sessions">
+                  </span>
+                  <h5>NAMA-STAY</h5>
+                  <p><span>Yoga SESSIONS</span><br> Get your flow on even during your vacation with our Yoga classes.</p>
+                </a>
+              </li>
+              <li>
+                <a data-bs-toggle="tab" href="#restaurant">
+                  <span class="service-icon">
+                    <img src="images/fork.png" style="width: 92%; border-radius: 88px;" alt="Restaurant & Bar">
+                  </span>
+                  <h5>A JOURNEY THROUGH LUXURY SEA VIEW’S CULINARY UNIVERSE</h5>
+                  <p><span>RESTAURANT</span><br> Our Restaurant & Bar serves the finest Greek cuisine with a creative twist. </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="counter mt-5" style="background-image: url(images/happy.clients.jpeg);">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-lb-0 mb-md-0 mb-5">
+            <h1>
+              <span id="count1"></span>+
+            </h1>
+            <p>Happy Clients</p>
+          </div>
+          <div class="col-md-3 mb-lb-0 mb-md-0 mb-5">
+            <h1>
+              <span id="count2"></span>+
+            </h1>
+            <p>New Friendships</p>
+          </div>
+          <div class="col-md-3 mb-lb-0 mb-md-0 mb-5">
+            <h1>
+              <span id="count3"></span>+
+            </h1>
+            <p>Five Star Ratings</p>
+          </div>
+          <div class="col-md-3 mb-lb-0 mb-md-0 mb-5">
+            <h1>
+              <span id="count4"></span>+
+            </h1>
+            <p>Served Breakfast</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-title text-center mb-5">
+          <h3>Photo Gallery</h3>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/1.jpg" style="height: 279px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/2.jpg" style="height: 279px;"  class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/view2.jpeg" style="height: 279px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/4.jpg" style="height: 279px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/5.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/6.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/7.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/8.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/9.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/10.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/11.jpg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 gallery-item">
+          <img src="images/view1.jpeg" style="height: 220px;" class="img-fluid w-100">
+          <div class="gallery-item-content"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price" class="price_wrapper">
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-12 section-title text-center mb-5">
+          <h3>Our Prices</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card p-4 text-center rounded-3">
+          <h5 class="text-decoration-underline mb-4">Basic</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Simple Serenity</p>
+            </li>
+            <li>
+              <p>Unwind in comfort with our Simple Serenity package. Enjoy a peaceful escape in well-appointed rooms, where essential amenities await you. Whether you're traveling for business or leisure, this package offers a tranquil stay that allows you to recharge and relax.</p>
+            </li>
+          </ul>
+          <hr/>
+          <h3>$220<sub class="fs-6 fw-normal">/NIGHT</sub> </h3>
+          <a href="#" class="main-btn">Sign Up</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card p-4 text-center rounded-3">
+          <h5 class="text-decoration-underline mb-4">VIP</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Royal Oasis</p>
+            </li>
+            <li>
+              <p>Experience the pinnacle of luxury. Indulge in lavish accommodations, personalized concierge service, and exclusive access to premium facilities. From the moment you arrive, you'll be treated like royalty, ensuring a stay that's nothing short of extraordinary.</p>
+            </li>
+          </ul>
+          <hr/>
+          <h3>$350<sub class="fs-6 fw-normal">/NIGHT</sub> </h3>
+          <a href="#" class="main-btn">Sign Up</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card p-4 text-center rounded-3">
+          <h5 class="text-decoration-underline mb-4">VIP</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Platinum Perks</p>
+            </li>
+            <li>
+              <p>Elevate your stay to unprecedented heights. This is more than just a room – it's a journey into opulence. Enjoy private check-in, spa credits, gourmet dining experiences, and a host of VIP privileges that redefine what it means to be pampered.
+              </p>
+            </li>
+          </ul>
+          <hr/>
+          <h3>$500<sub class="fs-6 fw-normal">/NIGHT</sub> </h3>
+          <a href="#" class="main-btn">Sign Up</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card p-4 text-center rounded-3">
+          <h5 class="text-decoration-underline mb-4">VIP</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Glamour Heaven</p>
+            </li>
+            <li>
+              <p>Immerse yourself in the world of elegance and luxury. From the moment you step through our doors, you'll be transported into a realm of sophistication and indulgence. Enjoy exquisite accommodations, personalized service fit for royalty.</p>
+            </li>
+          </ul>
+          <hr/>
+          <h3>$680<sub class="fs-6 fw-normal">/NIGHT</sub> </h3>
+          <a href="#" class="main-btn">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="contact-form">
+      <div class="col-sm-12 section-title text-center mb-5">
+        <h3>Contact Us</h3>
+      </div>
+      <form id="contactForm">
+        <div class="contact-section">
+          <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Email:</strong> pap.dana@yahoo.com</p>
+            <p><strong>Phone:</strong> +40 770 521 978</p>
+            <p><strong>Address:</strong> Oia (Ia), Santorini, 84702 Cyclades Islands, Greece</p>
+          </div>   
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="map-section">
+    <div class="col-sm-12 section-title text-center mb-5">
+      <h3>Location and Area</h3>
+      <p><strong>Directions</strong></p>
+      <p>Arriving in Oia, 10 meters from the main square of St. George Church, on the left side, descending the Caldera, you will find Luxury Sea View Hotel.</p>
+    </div>
+    <br>
+    <div id="map" style="height: 400px;margin: 30px;"></div>
+  </section>
+
+  <section class="testimonial-container">
+    <div class="testimonial" id="testimonial1">
+      <div class="testi-content">
+        <div class="slider-caption">
+          <img src="images/selfie1.jpeg" alt="" class="image">
+          <p>
+            Located wise is amazing and its not noisy once in the night so you can sleep well. Their rooms are really great, cozy and comfortable, whether for business or leisure travelers. What makes me more surprised is their staff, they are really amazing and you can see the genuine care from their staff, especially in the lobby like doorman or front office team. They also remembered me for my second stay after a few months ago and were very helpful.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">George</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="testimonial" id="testimonial2">
+      <div class="testi-content">
+        <div class="slider-caption">
+          <img src="images/selfie2.jpeg" alt="" class="image">
+          <p>
+            I always stay at Luxury Sea View Hotel when I visit. Its location is perfect for public transportation, the rooms and dining are excellent, and the staff is wonderfully friendly and considerate. No better place in my experience!
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Amalia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="testimonial" id="testimonial3">
+      <div class="testi-content">
+        <div class="slider-caption">
+          <img src="images/selfie3.jpeg" alt="" class="image">
+          <p>
+            I have been coming to this hotel for 10 years and have always had excellent service. The staff are excellent and the hotel represents fantastic value, given its excellent location in the heart of Oia.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Louisa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial" id="testimonial4">
+      <div class="testi-content">
+        <div class="slider-caption">
+          <img src="images/selfie4.jpeg" alt="" class="image">
+          <p>
+            Always the best, excellent service. Especially Front Office staff smiles and greeting as always. Speak English very well, well trained. Good location . Hotel is ok but the staff makes my stay. Will be there as always. Recommended when you come to Santorini.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Maria</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial" id="testimonial5">
+      <div class="testi-content">
+        <div class="slider-caption">
+          <img src="images/selfie5.jpeg" alt="" class="image">
+          <p>
+            Extremely friendly and helpful staff - they went out of their way to assist us with getting laundry done, calling taxi's and recommending places to go. The breakfast was outstanding! Huge variety and again, staff in the restaurant were awesome! The location is excellent. The hotel totally exceeded my expectations. I have already booked my next stay!
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Ivonne</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bootstrap JS CDN Links -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  
+  <script src="js/swiper.js"></script>
+  <!-- Swiper JS -->
+ 
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7d2BTNxPeBvDopqwIOzmgB8920bOY1xU&callback=initMap" async defer></script>
+  <script src="js/main.js"></script>
+  
+  
+</html>
